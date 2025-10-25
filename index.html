@@ -160,10 +160,221 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
             transition: transform 0.3s;
         }
+.character-card:hover {
+            transform: translateY(-10px);
+        }
 
- </style>
-    </head>
-    <body>
-        start
-    </body>
+        .character-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            background: linear-gradient(45deg, #ff4757, #5352ed);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .character-card h3 {
+            color: #ff4757;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Evas */
+        .evas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .eva-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .eva-image {
+            height: 200px;
+            background: linear-gradient(45deg, #ff4757, #5352ed);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .eva-info {
+            padding: 1.5rem;
+        }
+
+        .eva-info h3 {
+            color: #ff4757;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid #333;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">NGE</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#about">О сериале</a></li>
+                    <li><a href="#characters">Персонажи</a></li>
+                    <li><a href="#evas">Евангелионы</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Neon Genesis Evangelion</h1>
+                <p>Легендарное аниме, изменившее жанр меха и оказавшее огромное влияние на поп-культуру. История о пилотах-подростках, сражающихся с загадочными Ангелами.</p>
+                <a href="#about" class="btn">Узнать больше</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">О сериале</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p><strong>Neon Genesis Evangelion</strong> - культовое аниме-сериал, созданный студией Gainax под руководством Хидэаки Анно. Вышел в эфир в 1995 году и мгновенно стал феноменом.</p>
+                    <br>
+                    <p>Сериал сочетает в себе элементы меха, психологической драмы и философских размышлений. Действие происходит в 2015 году, через 15 лет после глобальной катастрофы "Второго Удара".</p>
+                    <br>
+                    <p>Главный герой - Синдзи Икари, 14-летний подросток, который становится пилотом биоробота "Евангелион-01" для борьбы с таинственными существами - Ангелами.</p>
+                </div>
+                <div class="about-image">
+                    <div style="width:100%;height:300px;background:linear-gradient(45deg,#ff4757,#5352ed);display:flex;align-items:center;justify-content:center;color:white;font-size:1.5rem;">
+                        Евангелион Изображение
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Characters Section -->
+    <section id="characters">
+        <div class="container">
+            <h2 class="section-title">Главные персонажи</h2>
+            <div class="characters-grid">
+                <div class="character-card">
+                    <div class="character-image">S.I.</div>
+                    <h3>Синдзи Икари</h3>
+                    <p>Пилот Евангелиона-01. Замкнутый и неуверенный в себе подросток.</p>
+                </div>
+                <div class="character-card">
+                    <div class="character-image">R.A.</div>
+                    <h3>Рей Аянами</h3>
+                    <p>Пилот Евангелиона-00. Загадочная и эмоционально сдержанная девушка.</p>
+                </div>
+                <div class="character-card">
+                    <div class="character-image">A.S.</div>
+                    <h3>Аска Лэнгли Сорью</h3>
+                    <p>Пилот Евангелиона-02. Самоуверенная и талантливая пилот из Германии.</p>
+                </div>
+                <div class="character-card">
+                    <div class="character-image">M.K.</div>
+                    <h3>Мисато Кацураги</h3>
+                    <p>Командующий операциями NERV. Опекун Синдзи и блестящий стратег.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Evas Section -->
+    <section id="evas">
+        <div class="container">
+            <h2 class="section-title">Евангелионы</h2>
+            <div class="evas-grid">
+                <div class="eva-card">
+                    <div class="eva-image">EVA-01</div>
+                    <div class="eva-info">
+                        <h3>Евангелион-01</h3>
+                        <p>Пилотируется Синдзи Икари. Первый успешный прототип Евы фиолетового цвета. Обладает уникальными способностями.</p>
+                    </div>
+                </div>
+                <div class="eva-card">
+                    <div class="eva-image">EVA-00</div>
+                    <div class="eva-info">
+                        <h3>Евангелион-00</h3>
+                        <p>Пилотируется Рей Аянами. Прототип синего цвета. Изначально нестабилен и опасен.</p>
+                    </div>
+                </div>
+                <div class="eva-card">
+                    <div class="eva-image">EVA-02</div>
+                    <div class="eva-info">
+                        <h3>Евангелион-02</h3>
+                        <p>Пилотируется Аской Лэнгли. Единица производства красного цвета. Высокая боевая эффективность.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Neon Genesis Evangelion Fan Site. Все права на аниме принадлежат Studio Khara, Gainax.</p>
+            <p>Сайт создан для фанатов великого произведения.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Плавная прокрутка для навигации
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Изменение header при скролле
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(0, 0, 0, 0.95)';
+            } else {
+                header.style.background = 'rgba(0, 0, 0, 0.8)';
+            }
+        });
+    </script>
+</body>
 </html>
