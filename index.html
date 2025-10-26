@@ -24,7 +24,6 @@
             padding: 0 20px;
         }
 
-        /* Header */
         header {
             background: rgba(0, 0, 0, 0.8);
             padding: 1rem 0;
@@ -64,7 +63,6 @@
             color: #ff4757;
         }
 
-        /* Hero Section */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
@@ -108,7 +106,6 @@
             color: #ff4757;
         }
 
-        /* Sections */
         section {
             padding: 80px 0;
         }
@@ -120,7 +117,6 @@
             color: #ff4757;
         }
 
-        /* About */
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -144,7 +140,6 @@
             display: block;
         }
 
-        /* Characters */
         .characters-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -159,6 +154,17 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             transition: transform 0.3s;
+        }
+        .characterPic{
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            border-radius: 50%;
+        }
+        .picture{
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
         }
 .character-card:hover {
             transform: translateY(-10px);
@@ -181,7 +187,6 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Evas */
         .evas-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -213,7 +218,6 @@
             margin-bottom: 1rem;
         }
 
-        /* Footer */
         footer {
             background: rgba(0, 0, 0, 0.9);
             padding: 2rem 0;
@@ -221,7 +225,6 @@
             border-top: 1px solid #333;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .about-content {
                 grid-template-columns: 1fr;
@@ -238,7 +241,6 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container">
             <nav>
@@ -253,7 +255,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
@@ -264,7 +265,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about">
         <div class="container">
             <h2 class="section-title">О сериале</h2>
@@ -278,35 +278,34 @@
                 </div>
                 <div class="about-image">
                     <div style="width:100%;height:300px;background:linear-gradient(45deg,#ff4757,#5352ed);display:flex;align-items:center;justify-content:center;color:white;font-size:1.5rem;">
-                        Евангелион Изображение
+                        <img class ="picture" src="https://www.mirf.ru/backend/wp-content/uploads/2021/03/b4fe7a283a3797f062bc71ba88a3548c.jpg">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-<!-- Characters Section -->
+
     <section id="characters">
         <div class="container">
             <h2 class="section-title">Главные персонажи</h2>
             <div class="characters-grid">
                 <div class="character-card">
-                    <div class="character-image">S.I.</div>
+                    <div class="character-image"><img class ="characterPic" src="https://static.wikia.nocookie.net/evangelion/images/2/2f/SCREEN_26_C343b.jpg/revision/latest?cb=20240201230205&path-prefix=fr"></div>
                     <h3>Синдзи Икари</h3>
                     <p>Пилот Евангелиона-01. Замкнутый и неуверенный в себе подросток.</p>
                 </div>
                 <div class="character-card">
-                    <div class="character-image">
-                     <img class ="ayanamiPic" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcitaty.info%2Fcharacter%2Frei-ayanami&psig=AOvVaw2vXZqpx-2aY9jUY1HijYGO&ust=1761579656409000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMjInd6ZwpADFQAAAAAdAAAAABAE">R.A.</div>
+                    <div class="character-image"><img class ="characterPic" src="https://i.pinimg.com/736x/3a/14/5b/3a145bc87bfe4f2dfcff189de94702dc.jpg"></div>
                     <h3>Рей Аянами</h3>
                     <p>Пилот Евангелиона-00. Загадочная и эмоционально сдержанная девушка.</p>
                 </div>
                 <div class="character-card">
-                    <div class="character-image">A.S.</div>
+                    <div class="character-image"><img class ="characterPic" src="https://pm1.aminoapps.com/7108/6c6092d4347e64c8f6b47f4682596dd4adf76eb1r1-640-480v2_hq.jpg"></div>
                     <h3>Аска Лэнгли Сорью</h3>
                     <p>Пилот Евангелиона-02. Самоуверенная и талантливая пилот из Германии.</p>
                 </div>
                 <div class="character-card">
-                    <div class="character-image">M.K.</div>
+                    <div class="character-image"><img class ="characterPic" src="https://abrakadabra.fun/uploads/posts/2022-03/1647932314_1-abrakadabra-fun-p-misato-katsuragi-na-avu-2.jpg"></div>
                     <h3>Мисато Кацураги</h3>
                     <p>Командующий операциями NERV. Опекун Синдзи и блестящий стратег.</p>
                 </div>
@@ -314,27 +313,26 @@
         </div>
     </section>
 
-    <!-- Evas Section -->
     <section id="evas">
         <div class="container">
             <h2 class="section-title">Евангелионы</h2>
             <div class="evas-grid">
                 <div class="eva-card">
-                    <div class="eva-image">EVA-01</div>
+                    <div class="eva-image"><img class ="picture" src="https://i.redd.it/v5wuteiotyvb1.jpg"></div>
                     <div class="eva-info">
                         <h3>Евангелион-01</h3>
                         <p>Пилотируется Синдзи Икари. Первый успешный прототип Евы фиолетового цвета. Обладает уникальными способностями.</p>
                     </div>
                 </div>
                 <div class="eva-card">
-                    <div class="eva-image">EVA-00</div>
+                    <div class="eva-image"><img class ="picture" src="https://preview.redd.it/mecha-portrait-eva-00-blue-and-yellow-versions-v0-ezq6mlj8fzyb1.jpg?width=1080&crop=smart&auto=webp&s=d7894421bf83f17547b1a7c1bd9aff7d9a652711"></div>
                     <div class="eva-info">
                         <h3>Евангелион-00</h3>
                         <p>Пилотируется Рей Аянами. Прототип синего цвета. Изначально нестабилен и опасен.</p>
                     </div>
                 </div>
                 <div class="eva-card">
-                    <div class="eva-image">EVA-02</div>
+                    <div class="eva-image"><img class ="picture" src="https://preview.redd.it/mecha-portrait-eva-02-v0-bv1mn6308qxb1.jpg?width=1080&crop=smart&auto=webp&s=c7a16565f381e770dfd6f6b1a79b1bc39a7d23a6"></div>
                     <div class="eva-info">
                         <h3>Евангелион-02</h3>
                         <p>Пилотируется Аской Лэнгли. Единица производства красного цвета. Высокая боевая эффективность.</p>
@@ -344,7 +342,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2024 Neon Genesis Evangelion Fan Site. Все права на аниме принадлежат Studio Khara, Gainax.</p>
@@ -367,7 +364,7 @@
             });
         });
 
-        // Изменение header при скролле
+        // Изменение хедера при скролле
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
